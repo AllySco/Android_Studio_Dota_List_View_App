@@ -1,12 +1,15 @@
 package com.codeclan.example.top10dotaheroes;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 /**
@@ -37,6 +40,22 @@ public class TopHeroesAdapter extends ArrayAdapter<Hero> {
 
         TextView role = (TextView) listItemView.findViewById(R.id.role);
         role.setText(currentHero.getRole());
+
+        ImageView image = (ImageView) listItemView.findViewById(R.id.hero_icon);
+        String nameIcon = currentHero.getName().toLowerCase();
+
+        try {
+            Class res = R.drawable.class;
+            Field field = res.getField(nameIcon);
+            int drawableId = field.getInt(null);
+            image.setImageResource(drawableId);
+
+        }
+        catch (Exception e) {
+            Log.e("MyTag", "Failure to get drawable id.", e);
+        }
+
+
 
         listItemView.setTag(currentHero);
 

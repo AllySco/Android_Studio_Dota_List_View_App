@@ -12,15 +12,15 @@ public class TopHeroes {
         public TopHeroes() {
             list = new ArrayList<Hero>();
             list.add(new Hero(1, "Invoker", "Intelligence", "Carry"));
-            list.add(new Hero(2, "Terror Blade", "Agility", "Carry"));
+            list.add(new Hero(2, "Terrorblade", "Agility", "Carry"));
             list.add(new Hero(3, "Disruptor", "Intelligence", "Support"));
             list.add(new Hero(4, "Zeus", "Intelligence", "Nuker"));
             list.add(new Hero(5, "Ursa", "Agility", "Jungler"));
             list.add(new Hero(6, "Pudge", "Strength", "Ganker"));
-            list.add(new Hero(7, "Tide Hunter", "Strength", "Initiator"));
-            list.add(new Hero(8, "Phantom Assassin", "Agility", "Carry"));
+            list.add(new Hero(7, "Tidehunter", "Strength", "Initiator"));
+            list.add(new Hero(8, "PhantomAssassin", "Agility", "Carry"));
             list.add(new Hero(9, "Razor", "Agility", "Pusher"));
-            list.add(new Hero(10, "Earth Spirit", "Strength", "Disabler"));
+            list.add(new Hero(10, "EarthSpirit", "Strength", "Disabler"));
 
         }
 
